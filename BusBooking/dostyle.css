@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    overflow-y: hidden;
+}
+.header1
+{
+    display: flex;
+    padding-left: 100x;
+    background-color: #D84F57;
+    color: white;
+    position: fixed;
+    width: 100%;
+    font-style: Montserrat;
+}
+
+.nav
+{
+list-style-type: none;
+display: flex;
+margin-top: 8px;
+}
+.first
+{
+    padding-left: 75px;
+}
+.second
+{
+    padding-left:87px;
+    cursor: pointer;
+}
+#adm
+{
+    text-decoration: none;
+    color: white;
+    
+    
+}
+#client
+{
+    text-decoration: none;
+    color: white;
+   
+}
+.div1
+{
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -81px;
+    border: 2px solid grey;
+    background-color: white;
+    height: 134px;
+    display: flex;
+    height: 3cm;
+}
+.img
+{
+    height: 100%;
+    width: 25%;
+    margin-left: -10px;
+}
+#innertext
+{
+    margin-top: 30px;
+    color: black;
+    font-family: Montserrat;
+}
+#inner1
+{
+    margin-top: 58px;
+    margin-left: -200px;
+}
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    top: 0px;
+    right: 28px;
+    width: 280px;
+  }
+  
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 40%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color:cadetblue;
+  }
+  
+
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  .datealign
+  {
+    margin-left: 20px;
+    height: 21px;
+    margin-top: 16px;
+  }

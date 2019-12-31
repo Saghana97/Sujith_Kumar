@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="dostyle.css" />
+    <link rel="stylesheet" type="text/css" href="clientpage.css" />
+
+</head>
+
+<body>
+    <div class='container'>
+        <!-- <h1 class='header'>Bus Route Finder</h1> -->
+        <div class='header1'>
+            <img src='download.png' style='height: 36px;width: 59px;'></img>
+            <ul class='nav'>
+                <li class='first'>Bus Tickets</li>
+                <li class='first'>rPool</li>
+                <li class='first'>Hotels</li>
+                <li class='first'>Bus Hire</li>
+                <li class='first'>Pilgrimages</li>
+            </ul>
+
+            <ul class="nav">
+                <li class='second'>Help</li>
+                <li class='second' onclick="openForm(0)"> UserLogin</li>
+                <li class='second' onclick="openForm(1)">AdminLogin</li>
+
+            </ul>
+        </div>
+        <div class="main">
+
+            <div class='showRoute'>
+                <ul class='bus1'>
+                    <li class='route'> KPN TRAVELS</li>
+                    <li class='route'> From:</li>
+                    <li class='route'> <input type='text' id='from1'></input></li>
+                    <li class='route'> to </li>
+                    <li class='route'><input type='text' id='to1'></input> </li>
+
+
+
+
+                    <input type='date' id='dateselect1' class='datealign'></input>
+                    <button onclick="showfields(1)" id="btnfirst">ShowRoute</button>
+                    <div id="myModal" class="modal">
+
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <ul id='busroute'>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </ul>
+                <ul class='bus2'>
+                    <li class='route'> A1 TRAVELS</li>
+                    <li class='route'> From:</li>
+                    <li class='route'><input type='text' id='from2'></input></li>
+                    <li class='route'> to </li>
+                    <li class='route'><input type='text' id='to2'></input></li>
+
+
+                    <input type='date' id='dateselect2' class="datealign"></input>
+                    <button onclick="showfields(2)" id="btnsecond">ShowRoute</button>
+
+
+                </ul>
+
+
+                <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+                <script defer src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+                <script src='./onsubmit.js'></script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id='mail' required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id='password' required>
+
+            <button type="submit" class="btn" onclick="login(localStorage.getItem('type'))">Login</button>
+            <button class="btn cancel" onclick="closeForm()">Close</button>
+        </div>
+    </div>
+    <script>
+
+
+        function openForm(e) {
+            document.getElementById("myForm").style.display = "block";
+            document.getElementsByClassName("showroute")[0].style.display = "none";
+            localStorage.setItem('type',e);
+        }
+
+        function closeForm() {
+            document.getElementsByClassName("showroute")[0].style.display = "block";
+
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

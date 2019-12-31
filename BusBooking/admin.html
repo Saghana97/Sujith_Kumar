@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='./adminpage.css'>
+    <link rel='stylesheet' href='./dostyle.css'>
+
+</head>
+
+<body>
+    <div class='header1'>
+        <img src='download.png' style='height: 36px;width: 59px;'></img>
+        <ul class='nav'>
+            <li class='first'>Bus Tickets</li>
+            <li class='first'>rPool</li>
+            <li class='first'>Hotels</li>
+            <li class='first'>Bus Hire</li>
+            <li class='first'>Pilgrimages</li>
+        </ul>
+
+        <ul class="nav">
+            <li class='second'>Help</li>
+            <li class='second'> <a href='#' id='adm'> Logged In</a></li>
+            <li class='second'><a href="frontpage.html" id='client'>User Login</a></li>
+        </ul>
+    </div>
+    <div class='bgimage'>
+    <div class='routeadd'>
+        
+        <h1 id='head'>Bus Route Maintanence</h1>
+        <div id='bus1' class='bus'>
+            <h class='denote'>KPN Travels:</h>
+            <h class='denote'><input type='text' id='fromgiven1'></input></h>
+            <h class='denote'>to</h>
+            <h class='denote'><input type='text' id='togiven1'></input></h>
+
+            <button onclick='addfields(1)'>Add Route</button>
+            <input type='date' id='enddate1' min="2019-12-31"></input>
+            <button onclick='submitfields(1)'>Submit Route</button>
+          
+            <!-- <button onclick='showfields()'>View Route</button> -->
+
+        </div>
+    </div>
+
+    <div class='routeadd'>
+
+        <div id='bus2' class="bus">
+            <h class='denote'>A1 Travels:</h>
+            <h class='denote'><input type='text' id='fromgiven2'></input></h>
+            <h class='denote'>to</h>
+            <h class='denote'><input type='text' id='togiven2'></input></h>
+
+            <button onclick='addfields(2)'>Add Route</button>
+            <input type='date' id='enddate2' min="2019-12-31"></input>
+
+            <button onclick='submitfields(2)'>Submit Route</button>
+            <!-- <button onclick='showfields()'>View Route</button> -->
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+    <script src='onsubmit.js'>
+    </script>
+
+</body>
+
+
+<script>
+    function addfields(e) {
+        // var count=localStorage.getItem('count');
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "text");
+        var temp = document.getElementById('bus' + e).childElementCount + 1;
+        x.setAttribute("id", "number" + e + temp);
+        document.getElementById('bus' + e).appendChild(x);
+        localStorage.setItem('count', temp)
+
+        console.log(temp);
+
+
+        // localStorage.setItem('count',++count);
+    }
+
+</script>
+
+</html>

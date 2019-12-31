@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="clientpage.css" />
+</head>
+
+<body>
+
+    <ul class='bus1'>
+        <li class='route'> KPN TRAVELS</li>
+        <li class='route'> From:</li>
+        <li class='route'> Coimbatore</li>
+        <li class='route'> to </li>
+        <li class='route'>Chennai </li>
+
+
+
+        <p>
+            <button onclick="showfields(1)" id="btn">ShowRoute</button>
+            <ul id='bus1route'>
+            </ul>
+        </p>
+    </ul>
+    <ul class='bus2'>
+        <li class='route'> A1 TRAVELS</li>
+        <li class='route'> From:</li>
+        <li class='route'> Coimbatore</li>
+        <li class='route'> to </li>
+        <li class='route'>Bangalore </li>
+
+
+
+        <p>
+            <button onclick="showfields(2)" id="btn">ShowRoute</button>
+            <ul id='bus2route'>
+            </ul>
+        </p>
+    </ul>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+    <script src='./onsubmit.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase.js"></script>
+
+</body>
+
+</html>

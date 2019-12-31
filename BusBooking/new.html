@@ -1,0 +1,24 @@
+<script>
+    function addfields() {
+        // var count=localStorage.getItem('count');
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "text");
+        var temp = document.getElementById('bus1').childElementCount + 1;
+        x.setAttribute("id", "number" + temp);
+        document.getElementById('bus1').appendChild(x);
+        localStorage.setItem('count', temp)
+
+        console.log(temp);
+
+
+        // localStorage.setItem('count',++count);
+    }
+    function submitfields() {
+        var y = localStorage.getItem('count');
+        for (var i = 7; i <= y; i++) {
+            var z = document.getElementById('number' + i).value;
+            console.log(z);
+        }
+    }
+
+</script>

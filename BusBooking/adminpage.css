@@ -1,0 +1,25 @@
+#head
+{
+    text-align: center;
+    color: cadetblue;
+}
+.bus
+{
+    margin: auto;
+  width: 90%;
+  border: 3px groove gold;
+  padding: 45px;
+  margin-top: 58px;
+}
+.bgimage
+{
+  background-image: url("./main.png");
+  height: 130%;
+
+}
+.denote
+{
+  font-weight: 800;
+  color: white;
+  padding-left: 10px;
+}
